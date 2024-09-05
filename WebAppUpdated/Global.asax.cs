@@ -38,7 +38,7 @@ namespace AppWithGacDependency
 
             // Based on the assembly name and version (and public key token, if necessary),
             // load the assembly from the appropriate path
-            if (assemblyName.Version.Major == 1 && assemblyName.Name == "Greeter")
+            if (assemblyName.Version == new Version(1, 1, 0, 0) && assemblyName.Name == "Greeter")
             {
                 var assemblyPath = Path.Combine(contentRoot, "Binaries", "v1", "Greeter.dll");
 
@@ -46,7 +46,7 @@ namespace AppWithGacDependency
                 // it will be loaded into the Load context by the CLR when it is returned
                 return Assembly.LoadFrom(assemblyPath);
             }
-            else if (assemblyName.Version.Major == 2 && assemblyName.Name == "Greeter")
+            else if (assemblyName.Version == new Version(2, 0, 0, 0) && assemblyName.Name == "Greeter")
             {
                 var assemblyPath = Path.Combine(contentRoot, "Binaries", "v2", "Greeter.dll");
                 return Assembly.LoadFrom(assemblyPath);
