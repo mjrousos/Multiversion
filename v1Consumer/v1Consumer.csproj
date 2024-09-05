@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net20</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<Reference Include="Greeter, Version=1.1.0.0, Culture=neutral, PublicKeyToken=13adf2573588af4f, processorArchitecture=MSIL">
+		<HintPath>..\..\..\..\Windows\assembly\GAC_MSIL\Greeter\1.1.0.0__13adf2573588af4f\Greeter.dll</HintPath>	  	  
+	</Reference>
+	 
+  </ItemGroup>
+	
+</Project>
